@@ -1,0 +1,14 @@
+.double-textarea{
+    padding:80px 60px 30px 60px;
+}
+.textarea-common{
+    min-height: 100px;
+    border:1px solid $themeColor;
+    width:100%;
+}
+.double-textarea-action{
+    padding:30px 80px 30px 0;
+    display: flex;
+    justify-content: end;
+   
+}
