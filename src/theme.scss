@@ -1,3 +1,4 @@
+$themeColor:#5CB85C;
 .double-textarea{
     padding:80px 60px 30px 60px;
 }
@@ -9,6 +10,12 @@
 .double-textarea-action{
     padding:30px 80px 30px 0;
     display: flex;
-    justify-content: end;
-   
+    justify-content: flex-end;
+   >div{
+       background-color: $themeColor;
+       color: white;
+       margin-left:30px;
+       padding:10px 20px;
+       border-radius: 5px;
+   }
 }
