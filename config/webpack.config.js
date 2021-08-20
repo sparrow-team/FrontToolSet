@@ -341,6 +341,7 @@ module.exports = function (webpackEnv) {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
+        '@': path.join(__dirname, '../', 'src'), //设置相对路径，参考Vue脚手架  @相当于../src/...
         ...(modules.webpackAliases || {}),
       },
       plugins: [

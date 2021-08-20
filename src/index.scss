@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.froot-tool-set-toast{
+  position:fixed;
+  padding:20px 30px;
+  top:40%;
+  left:45%;
+  z-index:2;
+  background-color:black;
+  opacity: 0.63;
+  color:white;
+  border-radius:10px;
+  transition: display 0.5s;
+}

@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.scss';
 import React, { useEffect, useState } from 'react';
-import {getAll, getDefault, getAutoSelectCom, setAutoSelectCom, logUseCom} from './common.js'
+import {getAll, getDefault, getAutoSelectCom, setAutoSelectCom, logUseCom, showToast} from './common.js'
 function App() {
   const [list,setList]=useState([])
   const [ShowComp,setShowComp]=useState()
   const [showName,setShowName]=useState('')
   const [autoSelected,setAutoSelected]=useState(getAutoSelectCom())
-  
   let allList = getAll();
   useEffect(()=>{
     setList(allList);
@@ -26,7 +25,12 @@ function App() {
     setShowComp(null);
   }
   const select = (index)=>{
-    setShowComp(allList[index])
+    if(allList[index].status==1){
+      setShowComp(allList[index])
+    }else{
+      showToast('开发中');
+    }
+    
   }
   const autoSelect = () =>{
     setAutoSelectCom()

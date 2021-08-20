@@ -1,0 +1,20 @@
+.qrcode-block{
+    padding-top:100px;
+}
+.img-block{
+    width:100px;
+    height:100px;
+    border:1px solid $themeColor
+}
+.show-content{
+    display: flex;
+    justify-content: center;
+}
+.input{
+    @include textarea-common();
+}
+.input-block{
+    width:60%;
+    margin:0 auto 30px auto;
+
+}

@@ -1,21 +1,37 @@
-$themeColor:#5CB85C;
-.double-textarea{
-    padding:80px 60px 30px 60px;
+$themeColor: #5cb85c;
+.double-textarea {
+  padding: 80px 60px 30px 60px;
 }
-.textarea-common{
-    min-height: 100px;
-    border:1px solid $themeColor;
-    width:100%;
+.textarea-common {
+  min-height: 100px;
+  border: 1px solid $themeColor;
+  width: 100%;
 }
-.double-textarea-action{
-    padding:30px 80px 30px 0;
-    display: flex;
-    justify-content: flex-end;
-   >div{
-       background-color: $themeColor;
-       color: white;
-       margin-left:30px;
-       padding:10px 20px;
-       border-radius: 5px;
-   }
+.double-textarea-action {
+  padding: 30px 80px 30px 0;
+  display: flex;
+  justify-content: flex-end;
+  > div {
+    background-color: $themeColor;
+    color: white;
+    margin-left: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+@mixin com-input {
+  height: 40px;
+  border: 1px solid $themeColor;
+  font-size: 30px;
+  color: $themeColor;
+  &:focus {
+    // border:3px solid $themeColor;
+    outline: 1px solid $themeColor;
+  }
+}
+@mixin textarea-common{
+  min-height: 100px;
+  border: 1px solid $themeColor;
+  width: 100%;
+  outline: 1px solid $themeColor;
 }
