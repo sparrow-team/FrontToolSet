@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./index.module.scss";
-export const IdCard = () => {
-    const [cardNum]
+const IdCard = () => {
+    const [cardNum,setCardNum]=useState('')
   const getIdCard = () => {
     var coefficientArray = [
       "7",
@@ -35,7 +35,7 @@ export const IdCard = () => {
       "3",
       "2",
     ]; // 校验码
-    var address = "420101"; // 住址
+    var address = "411122"; // 住址
     var birthday = "19810101"; // 生日
     var s =
       Math.floor(Math.random() * 10).toString() +
@@ -43,17 +43,21 @@ export const IdCard = () => {
       Math.floor(Math.random() * 10).toString();
     var array = (address + birthday + s).split("");
     var total = 0;
-    for (i in array) {
+    for (var i in array) {
       total = total + parseInt(array[i]) * parseInt(coefficientArray[i]);
     }
     var lastNumber = lastNumberArray[parseInt(total % 11)];
     var id_no_String = address + birthday + s + lastNumber;
-    
+    return id_no_String
   };
+  const clickGet = () => {
+    setCardNum(getIdCard())
+  }
   return (
     <div>
-      <div className={style["button"]}>生成身份证号</div>
-      <div></div>
+      <div className={style["button"]} onClick={clickGet}>生成身份证号</div>
+      <div>{cardNum}</div>
     </div>
   );
 };
+export default IdCard

@@ -4,6 +4,8 @@ const Base64Code = lazy(()=> import(/*webpackChunkName: "Base64Code" */ './Compo
 const DateTransport = lazy(()=> import(/*webpackChunkName:"DateTransport" */ './Component/DateTransport'))
 const Md5Encode = lazy(()=> import(/*webpackChunkName:"Md5Encode" */ './Component/Md5Encode'))
 const QrCode = lazy(()=> import(/*webpackChunkName:"Qrcode" */ './Component/Qrcode'))
+const IdCard = lazy(()=> import(/*webpackChunkName:"IdCard" */ './Component/IdCard'))
+const BankCard = lazy(()=> import(/*webpackChunkName:"BankCard" */ './Component/BankCard'))
 let list =[{
     id:1,
     name:'URL编码/解码',
@@ -30,6 +32,16 @@ let list =[{
     comp:QrCode,
     status:1,
   },{
+    id:8,
+    name:'虚拟银行卡号生成',
+    comp:BankCard,
+    status:1,
+  },{
+    id:9,
+    name:'虚拟身份证号生成',
+    comp:IdCard,
+    status:1,
+  },{
     id:6,
     name:'二维码识别',
     comp:UrlEncode,
@@ -40,16 +52,6 @@ let list =[{
     comp:UrlEncode,
     status:0,
 
-  },{
-    id:8,
-    name:'虚拟银行卡号生成',
-    comp:UrlEncode,
-    status:0,
-  },{
-    id:9,
-    name:'虚拟身份证号生成',
-    comp:UrlEncode,
-    status:0,
   },{
     id:10,
     name:'MD5解密',

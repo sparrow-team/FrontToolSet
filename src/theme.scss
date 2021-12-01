@@ -35,3 +35,13 @@ $themeColor: #5cb85c;
   width: 100%;
   outline: 1px solid $themeColor;
 }
+@mixin default-btn {
+  display: inline-block;
+  padding: 5px 20px;
+  line-height: 40px;;
+  text-align: center;
+  font-size: 20px;
+  background-color: $themeColor;
+  color:white;
+  border-radius: 5px;
+}
